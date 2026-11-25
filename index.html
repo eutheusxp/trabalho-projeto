@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lava-Rápido Ponto-Brilho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Lava-Rápido Ponto-Brilho</h1>
+    <p>O melhor cuidado para o seu veículo!</p>
+    <nav>
+      <a href="#servicos" onclick="abrirServicos()">Serviços</a> |
+      <a href="#depoimentos" onclick="abrirDepoimentos()">Depoimentos</a> |
+      <a href="#agendamento" onclick="abrirAgendamento()">Agendamento</a> |
+      <a href="#contato" onclick="abrirContato()">Contato</a>
+    </nav>
+    <img src="imagens/banner.png" alt="Carro sendo lavado" class="banner">
+  </header>
+
+  <hr>
+
+  <main>
+    <!-- Serviços -->
+    <section id="servicos">
+      <h2>Serviços</h2>
+
+      <h3>Lavagem Simples - R$ 40,00</h3>
+      <img src="imagens/lavagem-simples.png" alt="Lavagem simples" class="foto-servico">
+      <p>Lavagem externa com shampoo neutro, pretinho nos pneus, secagem e limpeza de vidros.</p>
+
+      <h3>Lavagem Premium - R$ 80,00</h3>
+      <img src="imagens/lavagem-premium.png" alt="Lavagem premium" class="foto-servico">
+      <p>Lavagem com cera protetora, aspiração completa, higienização interna e aromatização.</p>
+    </section>
+
+    <hr>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos">
+      <h2>Depoimentos</h2>
+      <p><em>"Atendimento excelente! Carro parecendo novo."</em> — Gustavo Santos</p>
+      <p><em>"Serviço rápido e de qualidade."</em> — Marcia Oliveira</p>
+      <p><em>"Preço justo e ótimo acabamento."</em> — Roberto Alves</p>
+    </section>
+
+    <hr>
+
+    <!-- Agendamento -->
+    <section id="agendamento">
+      <h2>Agendamento</h2>
+      <form action="#" method="POST">
+        <p>
+          <label for="nome">Nome Completo:</label><br>
+          <input type="text" id="nome" name="nome" required>
+        </p>
+
+        <p>
+          <label for="telefone">Telefone / WhatsApp:</label><br>
+          <input type="tel" id="telefone" name="telefone" required>
+        </p>
+
+        <p>
+          <label for="veiculo">Veículo (Modelo e Placa):</label><br>
+          <input type="text" id="veiculo" name="veiculo" required>
+        </p>
+
+        <p>
+          <label for="servico">Serviço:</label><br>
+          <select id="servico" name="servico" required>
+            <option value="">Selecione um serviço</option>
+            <option value="simples">Lavagem Simples - R$ 40,00</option>
+            <option value="premium">Lavagem Premium - R$ 80,00</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="data">Data e Horário:</label><br>
+          <input type="date" id="data" name="data" required>
+          <input type="time" id="horario" name="horario" required>
+        </p>
+
+        <button type="submit">Agendar</button>
+      </form>
+    </section>
+  </main>
+
+  <hr>
+
+  <!-- Contato -->
+  <footer id="contato">
+    <p><strong>Lava-Rápido Ponto-Brilho</strong></p>
+    <p>Endereço: Av. Paulista, 160 - Centro</p>
+    <p>Horário: Segunda a Sábado, das 08h às 18h</p>
+    <p>&copy; 2026 Lava-Rápido Ponto-Brilho</p>
+  </footer>
+  <div class="modal" id="modal-confirmacao">
+    <div class="modal-caixa">
+      <div class="modal-icone">✓</div>
+      <h3>Parabéns, <span id="m-nome"></span>!</h3>
+      <p class="modal-texto">Seu agendamento foi feito com sucesso.</p>
+
+      <ul class="modal-lista">
+        <li><span>Serviço</span><strong id="m-servico"></strong></li>
+        <li><span>Veículo</span><strong id="m-veiculo"></strong></li>
+        <li><span>Data</span><strong id="m-data"></strong></li>
+        <li><span>Horário</span><strong id="m-horario"></strong></li>
+        <li><span>Contato</span><strong id="m-telefone"></strong></li>
+      </ul>
+
+      <p class="modal-texto">Te esperamos no Lava-Rápido Ponto-Brilho!</p>
+      <button type="button" id="m-fechar">Fechar</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
